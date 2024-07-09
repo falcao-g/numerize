@@ -5,9 +5,6 @@
 <p align="center">
     <a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/v/numerize.svg?maxAge=3600" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/dt/numerize.svg?maxAge=3600" alt="npm downloads" /></a>
-    <a title="Support server" href="https://discord.gg/8WrAtVYVKR">
-        <img src="https://img.shields.io/discord/742332099788275732.svg?&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2&label=Support" alt="Support server">
-    </a>
         <a title="Stars" href="https://github.com/falcao-g/falbot">
         <img src="https://img.shields.io/github/stars/falcao-g/numerize" alt="Stars">
     </a>
