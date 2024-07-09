@@ -1,0 +1,5 @@
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/falcao-g/numerize/discussions
+    about: Use the discussions to ask questions, share ideas, and collaborate with the community.
+blank_issues_enabled: false

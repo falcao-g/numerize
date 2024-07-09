@@ -1,0 +1,25 @@
+{
+  "name": "numerize",
+  "version": "1.0.0",
+  "description": "Numerize is a package that converts words to numbers",
+  "main": "index.js",
+  "author": "Falcão",
+  "license": "MIT",
+  "keywords": [
+    "numerize",
+    "numbers",
+    "words",
+    "convert"
+  ],
+  "homepage": "https://github.com/falcao-g/numerize#readme",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falcao-g/numerize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/falcao-g/numerize/issues"
+  }
+}
