@@ -36,15 +36,15 @@ function addSuffixes(newSuffixes) {
 /**
  *
  * @param {string} string
- * @param {integer} total
+ * @param {integer} total - default 0
  * @description Parses a string to an integer
  * @example specialArg('10%', 1000) // 100
  * @returns {integer}
  */
-function numerize(string, total) {
+function numerize(string, total = 0) {
 	string = string.toLowerCase()
-	string.replace(/,/g, "")
-	string.replace(/\./g, "")
+	string = string.replace(/,/g, "")
+	string = string.replace(/\./g, "")
 	var new_value = parseInt(string)
 
 	if (string in words) {
