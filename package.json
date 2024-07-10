@@ -1,6 +1,6 @@
 {
   "name": "numerize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Numerize is a package that converts words to numbers",
   "main": "index.js",
   "author": "Falcão",
@@ -9,7 +9,9 @@
     "numerize",
     "numbers",
     "words",
-    "convert"
+    "convert",
+    "percentage",
+    "format"
   ],
   "homepage": "https://github.com/falcao-g/numerize#readme",
   "files": [
