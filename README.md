@@ -1,6 +1,6 @@
 <h1 align="center"> NUMERIZE </h1>
 
-> **numerize is a very useful package that converts words to numbers**
+> **Numerize is a very useful package that converts words to numbers**
 
 <p align="center">
     <a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/v/numerize.svg?maxAge=3600" alt="npm version" /></a>
@@ -10,7 +10,7 @@
     </a>
 </p>
 
-## **✨ Why numerize?**
+## **✨ Why Numerize?**
 
 - Easy to use & complete.
 - Extremely useful to game-related projects.
@@ -25,13 +25,37 @@ npm i numerize
 
 ## **📚 Usage**
 
-Starting a game with Falgames is as easy as the following example:
+Numerize is as easy to use as the following examples:
 
 ```js
 const { numerize } = require("numerize")
 
 console.log(numerize("10%", 100)) // 10
-console.log(numerize("1m", 100)) // 1000000
+console.log(numerize("1m")) // 1000000
 console.log(numerize("half", 1000)) // 500
 console.log(numerize("all", 1000)) // 1000
+console.log(numerize("1.000")) // 1000
+```
+
+This is very useful when reading inputs from users in a game, like a discord bot for example, when you want to ask the user how much money they want to spend, they can answer a number, a percentage, "all", "half", 1m, 1k, etc.
+
+You can also add custom words and suffixes to the numerize function:
+
+```js
+const { numerize, addWords, addSuffixes } = require("numerize")
+
+addWords({
+	quarter: 25,
+	third: 33,
+})
+
+addSuffixes({
+	c: 100,
+	d: 12,
+})
+
+console.log(numerize("quarter", 100)) // 25
+console.log(numerize("third", 100)) // 33
+console.log(numerize("1c")) // 100
+console.log(numerize("1d")) // 12
 ```
