@@ -37,6 +37,17 @@ console.log(numerize("all", 1000)) // 1000
 console.log(numerize("1.000")) // 1000
 ```
 
+Additionally, you can use the `numerizef` function if you want to return the number as a float:
+
+```js
+const { numerizef } = require("numerize")
+
+console.log(numerizef("33%", 2001, "no")) // 660.33
+console.log(numerizef("33%", 2001, "round")) // 660
+console.log(numerizef("33%", 2001, "up")) // 661
+console.log(numerizef("33%", 2001, "down")) // 660
+```
+
 This is very useful when reading inputs from users in a game, like a discord bot for example, when you want to ask the user how much money they want to spend, they can answer a number, a percentage, "all", "half", 1m, 1k, etc.
 
 You can also add custom words and suffixes to the numerize function:

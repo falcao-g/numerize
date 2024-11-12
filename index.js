@@ -70,10 +70,10 @@ function numerize(string, total = 0) {
  * @param {boolean} round - default "no"
  * @description Parses a string to an float
  * @example numerize('10%', 1000) // 100
- * @example console.log(numerizef("33%", 2001, "no")) // 660.33
- * @example console.log(numerizef("33%", 2001, "round")) // 660
- * @example console.log(numerizef("33%", 2001, "up")) // 661
- * @example console.log(numerizef("33%", 2001, "down")) // 660
+ * @example numerizef("33%", 2001, "no") // 660.33
+ * @example numerizef("33%", 2001, "round") // 660
+ * @example numerizef("33%", 2001, "up") // 661
+ * @example numerizef("33%", 2001, "down") // 660
  * @returns {float}
  */
 function numerizef(string, total = 0, round = "no") {
