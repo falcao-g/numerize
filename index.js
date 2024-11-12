@@ -38,7 +38,8 @@ function addSuffixes(newSuffixes) {
  * @param {string} string
  * @param {integer} total - default 0
  * @description Parses a string to an integer
- * @example specialArg('10%', 1000) // 100
+ * @example numerize('10%', 1000) // 100
+ * @example numerize('1k', 2) // 1000
  * @returns {integer}
  */
 function numerize(string, total = 0) {
@@ -52,7 +53,7 @@ function numerize(string, total = 0) {
 	} else if (string.slice(-1) in suffixes) {
 		new_value = parseInt(string.slice(0, -1)) * suffixes[string.slice(-1)]
 	} else if (string.slice(-1) == "%") {
-		new_value = parseInt((parseInt(string.slice(0, -1)) * parseInt(total)) / 100)
+		new_value = (parseInt(string.slice(0, -1)) * parseInt(total)) / 100
 	}
 
 	if (parseInt(new_value) <= 0 || isNaN(parseInt(new_value))) {
@@ -62,8 +63,48 @@ function numerize(string, total = 0) {
 	}
 }
 
+/**
+ *
+ * @param {string} string
+ * @param {integer} total - default 0
+ * @param {boolean} round - default "no"
+ * @description Parses a string to an float
+ * @example numerize('10%', 1000) // 100
+ * @example console.log(numerizef("33%", 2001, "no")) // 660.33
+ * @example console.log(numerizef("33%", 2001, "round")) // 660
+ * @example console.log(numerizef("33%", 2001, "up")) // 661
+ * @example console.log(numerizef("33%", 2001, "down")) // 660
+ * @returns {float}
+ */
+function numerizef(string, total = 0, round = "no") {
+	string = string.toLowerCase()
+	var new_value = Number(string)
+
+	if (string in words) {
+		new_value = (words[string] * total) / 100
+	} else if (string.slice(-1) in suffixes) {
+		new_value = Number(string.slice(0, -1)) * suffixes[string.slice(-1)]
+	} else if (string.slice(-1) == "%") {
+		new_value = (Number(string.slice(0, -1)) * Number(total)) / 100
+	}
+
+	if (Number(new_value) <= 0 || isNaN(Number(new_value))) {
+		throw Error("Invalid value!")
+	} else {
+		if (round == "up") {
+			return Math.ceil(Number(new_value))
+		} else if (round == "down") {
+			return Math.floor(Number(new_value))
+		} else if (round == "round") {
+			return Math.round(Number(new_value))
+		}
+		return Number(new_value)
+	}
+}
+
 export default {
 	addWords,
 	addSuffixes,
 	numerize,
+	numerizef,
 }
