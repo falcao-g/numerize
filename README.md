@@ -3,11 +3,13 @@
 > **Numerize is a very useful package that converts words to numbers**
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/v/numerize.svg?maxAge=3600" alt="npm version" /></a>
+    	<a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/v/numerize.svg?maxAge=3600" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/numerize"><img src="https://img.shields.io/npm/dt/numerize.svg?maxAge=3600" alt="npm downloads" /></a>
+		<a href="https://jsr.io/@falcao/numerize"><img src="https://jsr.io/badges/@falcao/numerize" alt="jsr version" /></a>
+		<a href="https://jsr.io/@falcao/numerize"><img src="https://jsr.io/badges/@falcao/numerize/score" alt="jsr score" /></a>
         <a title="Stars" href="https://github.com/falcao-g/falbot">
         <img src="https://img.shields.io/github/stars/falcao-g/numerize" alt="Stars">
-    </a>
+    </a> 
 </p>
 
 ## **✨ Why Numerize?**
