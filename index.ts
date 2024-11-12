@@ -27,7 +27,7 @@ const suffixes = {
  * @description Adds new words to the dictionary
  * @example addWords({ quarter: 25}) // { all: 100, half: 50, tudo: 100, metade: 50, todo: 100, mitad: 50, quarter: 25 }
  */
-function addWords(newWords) {
+function addWords(newWords: Object) {
 	Object.assign(words, newWords)
 }
 
@@ -37,7 +37,7 @@ function addWords(newWords) {
  * @description Adds new suffixes to the dictionary
  * @example addWords({ c: 100}) // { k: 1000, m: 1000000, b: 1000000000, c: 100 }
  */
-function addSuffixes(newSuffixes) {
+function addSuffixes(newSuffixes: Object) {
 	Object.assign(suffixes, newSuffixes)
 }
 
@@ -50,7 +50,7 @@ function addSuffixes(newSuffixes) {
  * @example numerize('1k', 2) // 1000
  * @returns {number}
  */
-function numerize(string, total = 0) {
+function numerize(string: string, total: number = 0): number {
 	string = string.toLowerCase()
 	string = string.replace(/,/g, "")
 	string = string.replace(/\./g, "")
@@ -84,7 +84,7 @@ function numerize(string, total = 0) {
  * @example numerizef("33%", 2001, "down") // 660
  * @returns {number}
  */
-function numerizef(string, total = 0, round = "no") {
+function numerizef(string: string, total: number = 0, round: string = "no"): number {
 	string = string.toLowerCase()
 	var new_value = Number(string)
 

@@ -1,12 +1,12 @@
 {
     "name": "@falcao/numerize",
-    "version": "1.1.1",
-    "exports": "./index.js",
+    "version": "1.1.2",
+    "exports": "./index.ts",
     "publish": {
         "include": [
           "LICENSE",
           "README.md",
-          "./index.js"
+          "./index.ts"
         ]
       },
     "license": "MIT"
