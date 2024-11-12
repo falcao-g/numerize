@@ -2,7 +2,7 @@
  * @description Words that correspond to a percentage
  * @example all = 100%
  */
-const words = {
+const words: {[key: string]: number} = {
 	all: 100,
 	half: 50,
 	tudo: 100,
@@ -15,7 +15,7 @@ const words = {
  * @description Suffixes for numbers
  * @example 1k = 1000
  */
-const suffixes = {
+const suffixes: {[key: string]: number} = {
 	k: 1000,
 	m: 1000000,
 	b: 1000000000,
