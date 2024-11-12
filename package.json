@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Numerize is a package that converts words to numbers",
   "main": "index.js",
+  "type": "module",
   "author": "Falcão",
   "license": "MIT",
   "keywords": [

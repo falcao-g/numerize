@@ -1,0 +1,5 @@
+{
+    "name": "@falcao/numerize",
+    "version": "1.0.2",
+    "exports": "./index.js"
+}

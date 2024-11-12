@@ -62,7 +62,7 @@ function numerize(string, total = 0) {
 	}
 }
 
-module.exports = {
+export default {
 	addWords,
 	addSuffixes,
 	numerize,
