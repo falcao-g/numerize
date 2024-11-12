@@ -23,6 +23,12 @@
 npm i numerize
 ```
 
+or
+
+```bash
+deno add jsr:@falcao/numerize
+```
+
 ## **📚 Usage**
 
 Numerize is as easy to use as the following examples:
