@@ -110,9 +110,4 @@ function numerizef(string: string, total: number = 0, round: string = "no"): num
 	}
 }
 
-export default {
-	addWords,
-	addSuffixes,
-	numerize,
-	numerizef,
-}
+export default { addWords, addSuffixes, numerize, numerizef }
