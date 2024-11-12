@@ -1,5 +1,22 @@
 "use strict";
+/**
+ * @module
+ *
+ * This module provides functions to parse strings to numbers.
+ *
+ * @example
+ * ```ts
+ * import { numerize } from "@falcao/eh-par";
+ * const userMoney = 1000;
+ * const userInput = "10%";
+ * console.log(numerize(userInput, userMoney)); // 100
+ * ```
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.addWords = addWords;
+exports.addSuffixes = addSuffixes;
+exports.numerize = numerize;
+exports.numerizef = numerizef;
 /**
  * @description Words that correspond to a percentage
  * @example all = 100%
@@ -22,28 +39,27 @@ const suffixes = {
     b: 1000000000,
 };
 /**
- *
+ * Adds new words to the dictionary
  * @param {Object} newWords
- * @description Adds new words to the dictionary
  * @example addWords({ quarter: 25}) // { all: 100, half: 50, tudo: 100, metade: 50, todo: 100, mitad: 50, quarter: 25 }
+ * @returns - void
  */
 function addWords(newWords) {
     Object.assign(words, newWords);
 }
 /**
- *
+ * Adds new suffixes to the dictionary
  * @param {Object} newSuffixes
- * @description Adds new suffixes to the dictionary
  * @example addWords({ c: 100}) // { k: 1000, m: 1000000, b: 1000000000, c: 100 }
+ * @returns - void
  */
 function addSuffixes(newSuffixes) {
     Object.assign(suffixes, newSuffixes);
 }
 /**
- *
+ * Parses a string to an integer
  * @param {string} string
  * @param {number} total - default 0
- * @description Parses a string to an integer
  * @example numerize('10%', 1000) // 100
  * @example numerize('1k', 2) // 1000
  * @returns {number}
@@ -70,11 +86,10 @@ function numerize(string, total = 0) {
     }
 }
 /**
- *
+ * Parses a string to an float
  * @param {string} string
  * @param {number} total - default 0
  * @param {string} round - default "no"
- * @description Parses a string to an float
  * @example numerize('10%', 1000) // 100
  * @example numerizef("33%", 2001, "no") // 660.33
  * @example numerizef("33%", 2001, "round") // 660
@@ -110,9 +125,3 @@ function numerizef(string, total = 0, round = "no") {
         return new_value;
     }
 }
-exports.default = {
-    addWords,
-    addSuffixes,
-    numerize,
-    numerizef,
-};
