@@ -1,4 +1,3 @@
-"use strict";
 /**
  * @module
  *
@@ -12,11 +11,6 @@
  * console.log(numerize(userInput, userMoney)); // 100
  * ```
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.addWords = addWords;
-exports.addSuffixes = addSuffixes;
-exports.numerize = numerize;
-exports.numerizef = numerizef;
 /**
  * @description Words that correspond to a percentage
  * @example all = 100%
@@ -44,7 +38,7 @@ const suffixes = {
  * @example addWords({ quarter: 25}) // { all: 100, half: 50, tudo: 100, metade: 50, todo: 100, mitad: 50, quarter: 25 }
  * @returns - void
  */
-function addWords(newWords) {
+export function addWords(newWords) {
     Object.assign(words, newWords);
 }
 /**
@@ -53,7 +47,7 @@ function addWords(newWords) {
  * @example addWords({ c: 100}) // { k: 1000, m: 1000000, b: 1000000000, c: 100 }
  * @returns - void
  */
-function addSuffixes(newSuffixes) {
+export function addSuffixes(newSuffixes) {
     Object.assign(suffixes, newSuffixes);
 }
 /**
@@ -64,7 +58,7 @@ function addSuffixes(newSuffixes) {
  * @example numerize('1k', 2) // 1000
  * @returns {number}
  */
-function numerize(string, total = 0) {
+export function numerize(string, total = 0) {
     string = string.toLowerCase();
     string = string.replace(/,/g, "");
     string = string.replace(/\./g, "");
@@ -97,7 +91,7 @@ function numerize(string, total = 0) {
  * @example numerizef("33%", 2001, "down") // 660
  * @returns {number}
  */
-function numerizef(string, total = 0, round = "no") {
+export function numerizef(string, total = 0, round = "no") {
     string = string.toLowerCase();
     var new_value = Number(string);
     if (string in words) {
